@@ -1,3 +1,1 @@
-import { borderify } from "./borderify";
-
-borderify();
+// Nothing to do
