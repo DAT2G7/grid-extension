@@ -4,8 +4,8 @@
     "license": "MIT",
     "type": "commonjs",
     "scripts": {
-        "prebuild": "node ./scripts/prebuild.js",
-        "build": "webpack --mode=production && npx tscp -p webpack.tsconfig.json",
+        "build": "rm -rf ./dist && webpack --mode=production && npx tscp -p webpack.tsconfig.json",
+        "publish": "rm -rf ./dist.zip && npm run build && zip -r dist.zip dist",
         "lint": "eslint . --ext .ts",
         "lint:fix": "eslint . --ext .ts --fix",
         "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",

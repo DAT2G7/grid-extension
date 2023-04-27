@@ -1,5 +1,6 @@
 import { GRID_SERVER_URL } from "./config";
 import _ from "lodash";
+import browser from "webextension-polyfill";
 
 export enum StorageKeyLocal {
     GridTabs = "grid-tabs"

@@ -6,7 +6,8 @@ module.exports = () => {
         plugins: [new Dotenv()],
         entry: {
             content: ["./src/content/index.ts"],
-            background: ["./src/background/index.ts"]
+            background: ["./src/background/index.ts"],
+            popup: ["./src/actions/popup.ts"]
         },
         devtool: "inline-source-map",
         module: {
