@@ -10,6 +10,6 @@ browser.runtime.onInstalled.addListener(() => {
     navigateToGrid();
 });
 
-browser.tabs.onRemoved.addListener(async (tabId) => {
+browser.tabs.onRemoved.addListener((tabId) => {
     updateGridTabIds((ids) => ids.filter((id) => id !== tabId));
 });
