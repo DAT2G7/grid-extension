@@ -26,6 +26,10 @@ npm run build
 
 To install and try out the extension, see the [chrome installation guide](https://github.com/DAT2G7/grid-extension/releases).
 
+## Manifest notes
+
+`background.service_worker` references `background.js` even though a corresponding ts file does not exist. This is due to webpack configuration, which compiles `background/index.ts` to `background.js` in the build process. The same principle applies to `content` and `popup`.
+
 ## Unused code sections
 
 Certain directories in this repo contain what looks to be example code. This is code that was usefull in understanding extension development, but was not used in the final product. None of these sections are referenced in the extensions manifest file, and are therefore not included in published versions of the extension, were it to be published in the future.
